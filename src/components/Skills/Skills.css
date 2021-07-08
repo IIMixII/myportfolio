@@ -1,0 +1,13 @@
+.skillsCol {
+  margin: auto;
+  padding: 10px;
+  min-width: 250px;
+  max-width: 400px;
+  display: inline-block;
+  text-align: center;
+}
+
+.skillsRow {
+  justify-content: center;
+  margin: 0;
+}

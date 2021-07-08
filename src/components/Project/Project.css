@@ -1,0 +1,13 @@
+.projectStyle {
+  background-color: #1e202c;
+  transition: 1s;
+  color: white;
+  margin: 10px;
+  min-height: 16em;
+  width: 15em;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: #fff;
+}

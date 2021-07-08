@@ -1,0 +1,34 @@
+.aboutContainer {
+  margin-top: 20px;
+}
+
+.aboutRow {
+  text-align: center;
+  align-items: center;
+}
+
+.aboutCol {
+  color: white;
+  margin: 10px;
+  min-width: 300px;
+  text-align: center;
+}
+
+button {
+  background-color: black;
+  border: solid #2f008e 3px;
+  transition: 0.5s;
+  padding: 10px;
+  color: white;
+  font-size: 150%;
+}
+
+button:hover {
+  background-color: #340297;
+}
+
+button:focus {
+  outline: solid #0400ff 20px;
+  background-color: #2f077e;
+  transition: 0.5s;
+}

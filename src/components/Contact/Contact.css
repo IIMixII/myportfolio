@@ -1,0 +1,26 @@
+.formStyle {
+  text-align: center;
+}
+
+.formDivStyle {
+  padding: 7px;
+}
+
+.inputStyle {
+  background-color: black;
+  border: black solid 1px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  width: 80%;
+}
+
+.textareaStyle {
+  background-color: black;
+  border: black solid 1px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  width: 80%;
+  height: 100px;
+}

@@ -1,0 +1,17 @@
+.navbar {
+  background-color: #2f008e;
+  margin: 0 15px 0 15px;
+  justify-content: center;
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #d1d1d1;
+  font-size: 16px;
+  padding: 10px 10px 10px 10px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: white;
+  text-decoration: underline;
+}
