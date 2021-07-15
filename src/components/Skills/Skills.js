@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
 
 //     Style
@@ -26,9 +27,27 @@ import dockerCompose_img from "../../images/dockerCompose_logo.png";
 import linux_img from "../../images/linux_logo.png";
 
 //     Component
-export default function Skills() {
+export default function Skills(props) {
+  const changeHeight = () => {
+    props.setComponentHeight(document.getElementById("container").clientHeight);
+  };
+
+  useEffect(() => {
+    changeHeight();
+    window.addEventListener("resize", changeHeight);
+
+    // This is to correct the 'skills' component size for the first time
+    setTimeout(() => {
+      changeHeight();
+    }, 150);
+
+    return () => {
+      window.removeEventListener("resize", changeHeight);
+    };
+  });
+
   return (
-    <div>
+    <div id="container">
       <Row className="skillsRow">
         <Col className="skillsCol">
           <Title title="Backend" />

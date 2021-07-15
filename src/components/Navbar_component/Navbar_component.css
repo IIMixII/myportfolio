@@ -1,8 +1,8 @@
 .navbar {
-  background-color: #2f008e;
+  background-color: #2f008eab;
   margin: 0 15px 0 15px;
   justify-content: center;
-  color: white;
+  color: #d1d1d1;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -12,6 +12,10 @@
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color: white;
+  color: #d1d1d1;
   text-decoration: underline;
+}
+
+.navbar-light .navbar-nav .nav-link:focus {
+  color: #d1d1d1;
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 //     Components
 import Title from "../Title/Title";
@@ -7,10 +7,28 @@ import Title from "../Title/Title";
 import "./Contact.css";
 
 //     Component
-export default function Contact() {
+export default function Contact(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
+
+  const changeHeight = () => {
+    props.setComponentHeight(document.getElementById("container").clientHeight);
+  };
+
+  useEffect(() => {
+    changeHeight();
+    window.addEventListener("resize", changeHeight);
+
+    // This is to correct the 'skills' component size for the first time
+    setTimeout(() => {
+      changeHeight();
+    }, 150);
+
+    return () => {
+      window.removeEventListener("resize", changeHeight);
+    };
+  });
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -19,7 +37,7 @@ export default function Contact() {
   };
 
   return (
-    <div>
+    <div id="container">
       <Title title="Contact me" />
       <form onSubmit={onSubmit} className="formStyle">
         <div className="formDivStyle">

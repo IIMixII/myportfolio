@@ -9,9 +9,11 @@ export default function Project(props) {
   return (
     <div>
       <OverlayTrigger
-        placement="bottom"
+        placement="right"
         overlay={
-          <Tooltip style={{ transition: "opacity 0.5s linear" }}>
+          <Tooltip
+            style={{ transition: "opacity 0.5s linear", paddingLeft: "10px" }}
+          >
             <strong>{props.description}</strong>
           </Tooltip>
         }
@@ -23,7 +25,7 @@ export default function Project(props) {
               <div
                 style={{
                   height: "12em",
-                  backgroundColor: "#2a2c39",
+                  backgroundColor: "#2a2c39ab",
                   margin: "15px 15px 0px 15px",
                 }}
               >
@@ -32,7 +34,7 @@ export default function Project(props) {
               <div
                 style={{
                   height: "2em",
-                  backgroundColor: "#2a2c39",
+                  backgroundColor: "#2a2c39ab",
                   margin: "10px 15px 15px 15px",
                 }}
               >

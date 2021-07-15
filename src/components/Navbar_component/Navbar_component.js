@@ -4,23 +4,21 @@ import { Nav, Navbar } from "react-bootstrap";
 import "./Navbar_component.css";
 
 //     Component
-export default function Navbar_component() {
-  const selectComponent = (component) => {
-    this.props.changeComponent(component);
-  };
-
+export default function Navbar_component(props) {
   return (
     <div>
       <Navbar>
         <Nav>
-          <Nav.Link onClick={() => selectComponent("AboutMe")}>
+          <Nav.Link onClick={() => props.changeComponent("AboutMe")}>
             About me
           </Nav.Link>
-          <Nav.Link onClick={() => selectComponent("Skills")}>Skills</Nav.Link>
-          <Nav.Link onClick={() => selectComponent("Projects")}>
+          <Nav.Link onClick={() => props.changeComponent("Skills")}>
+            Skills
+          </Nav.Link>
+          <Nav.Link onClick={() => props.changeComponent("Projects")}>
             Projects
           </Nav.Link>
-          <Nav.Link onClick={() => selectComponent("ContactMe")}>
+          <Nav.Link onClick={() => props.changeComponent("ContactMe")}>
             Contact
           </Nav.Link>
         </Nav>

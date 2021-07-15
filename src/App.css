@@ -1,4 +1,8 @@
 .App {
-  min-height: 100%;
-  background-color: #030514;
+  transition: 0.8s;
+}
+.divWindow {
+  margin: 20px;
+  background-color: #121420ab;
+  transition: 0.8s;
 }
