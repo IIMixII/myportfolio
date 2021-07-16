@@ -15,7 +15,7 @@ import Window from "./components/Window/Window";
 
 //     App
 export default function App() {
-  const INITIAL_POSITION = window.screen.availHeight / 6;
+  const INITIAL_POSITION = window.screen.availHeight / 7;
 
   //  App states
   const [initialState, setInitialState] = useState(true);
@@ -25,7 +25,7 @@ export default function App() {
 
   //  Components states
   const [componentOpacity, setComponentOpacity] = useState(0);
-  const [componentTransition, setComponentTransition] = useState("0.8s");
+  const [componentTransition, setComponentTransition] = useState("0s");
   const [projects, setProjects] = useState([]);
   const [componentHeight, setComponentHeight] = useState(0);
 
@@ -49,9 +49,9 @@ export default function App() {
     setActualComponent(components[newComponent]);
 
     setTimeout(() => {
-      setComponentTransition("0.8s");
+      setComponentTransition("1.5s");
       setComponentOpacity(1);
-    }, 800);
+    }, 100);
   };
 
   const correctMargin = useCallback(() => {

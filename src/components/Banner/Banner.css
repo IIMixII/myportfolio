@@ -9,6 +9,7 @@
 
 .bannerTitle {
   text-align: center;
+  margin-top: 10px;
 }
 
 .bannerSubtitle {
@@ -19,7 +20,7 @@
 .bannerProfileImg {
   text-align: center;
   max-width: 200px;
-  border: solid 5px #1e2030;
+  border: solid 5px #200266;
   display: block;
   margin-left: auto;
   margin-right: auto;

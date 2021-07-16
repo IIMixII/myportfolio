@@ -31,7 +31,9 @@ function Banner(props) {
         src={profileImg}
         style={{ borderRadius: userHelpBorderRadius }}
       />
-      <h1 className="bannerTitle">Paul Antonio Almasi</h1>
+      <h1 className="bannerTitle">
+        <strong>Paul Antonio Almasi</strong>
+      </h1>
 
       <h3
         className="bannerSubtitle"
