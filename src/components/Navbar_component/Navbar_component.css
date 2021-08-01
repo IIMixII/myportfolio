@@ -1,8 +1,9 @@
 .navbar {
-  background-color: #2f008eab;
+  /* background-color: #2f008eab; */
   margin: 0 15px 0 15px;
   justify-content: center;
   color: #d1d1d1;
+  transition: 1s;
 }
 
 .navbar-light .navbar-nav .nav-link {

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import Typewriter from "typewriter-effect";
 
 //     Style
@@ -7,26 +7,25 @@ import "./AboutMe.css";
 
 //     Component
 export default function AboutMe(props) {
-  const changeHeight = () => {
-    props.setComponentHeight(document.getElementById("container").clientHeight);
+  const changeSize = () => {
+    if (document.getElementById("container") !== null) {
+      props.setComponentHeight(
+        document.getElementById("container").clientHeight
+      );
+    }
   };
 
   useEffect(() => {
-    changeHeight();
-    window.addEventListener("resize", changeHeight);
-
-    // This is to correct the 'skills' component size for the first time
-    setTimeout(() => {
-      changeHeight();
-    }, 150);
+    changeSize();
+    window.addEventListener("resize", changeSize);
 
     return () => {
-      window.removeEventListener("resize", changeHeight);
+      window.removeEventListener("resize", changeSize);
     };
   });
 
   return (
-    <Container fluid className="aboutContainer" id="container">
+    <div className="aboutDiv" id="container">
       <Row xs expand="lg2" className="aboutRow">
         <Col className="aboutCol">
           <h2>
@@ -49,9 +48,14 @@ export default function AboutMe(props) {
           </p>
         </Col>
         <Col className="aboutCol">
-          <button href="#">Download my CV</button>
+          <a
+            href="https://drive.google.com/file/d/1t4vg2MaSciSP-tAEMZvkBYmMPoNeY0OF/view?usp=sharing"
+            className="aboutButton"
+          >
+            Download my CV
+          </a>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 }

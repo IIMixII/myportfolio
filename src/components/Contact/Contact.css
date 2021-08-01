@@ -7,20 +7,55 @@
 }
 
 .inputStyle {
-  background-color: black;
-  border: black solid 1px;
-  border-radius: 10px;
+  background-color: #131624;
+  border: #0d0f1c solid 1px;
   text-align: center;
   color: white;
   width: 80%;
+  padding: 5px;
+}
+.inputStyle:focus {
+  outline: none !important;
+  border: 1px solid #340297;
+  box-shadow: 0 0 3px #340297;
 }
 
 .textareaStyle {
-  background-color: black;
-  border: black solid 1px;
-  border-radius: 20px;
+  background-color: #131624;
+  border: #0d0f1c solid 1px;
   text-align: center;
   color: white;
   width: 80%;
   height: 100px;
+  resize: none;
+  padding: 5px;
+}
+.textareaStyle:focus {
+  outline: none !important;
+  border: 1px solid #340297;
+  box-shadow: 0 0 3px #340297;
+}
+
+.formSubmit {
+  background-color: #340297;
+  border: solid #0d0f1c 3px;
+  transition: 0.5s;
+  padding: 10px;
+  color: white;
+  font-size: 150%;
+}
+
+.formSubmit:hover {
+  background-color: #5300f8;
+  color: white;
+}
+
+.formSubmit:focus {
+  outline: solid #2f077e 2px;
+}
+
+.outputMessage {
+  margin: 15px;
+  text-align: center;
+  font-size: 20px;
 }

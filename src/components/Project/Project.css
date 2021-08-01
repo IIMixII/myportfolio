@@ -11,3 +11,34 @@
   border-width: 1px;
   border-color: #fff;
 }
+
+.projectDivImage {
+  margin: 15px 15px 15px 15px;
+  background-color: #1e202cab;
+  padding: 15px;
+}
+.projectImage {
+  max-width: 180px;
+  height: 10em;
+  border-radius: 10px;
+}
+
+.projectButton {
+  background-color: #340297;
+  border: solid #0d0f1c 3px;
+  transition: 0.5s;
+  padding: 5px;
+  color: white;
+  /* font-size: 150%; */
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.projectButton:hover {
+  background-color: #5300f8;
+  color: white;
+}
+
+.projectButton:focus {
+  outline: solid #2f077e 2px;
+}

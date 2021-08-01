@@ -1,7 +1,3 @@
-.aboutContainer {
-  margin-top: 10px;
-}
-
 .aboutRow {
   text-align: center;
   align-items: center;
@@ -14,21 +10,22 @@
   text-align: center;
 }
 
-button {
-  background-color: black;
-  border: solid #2f008e 3px;
+.aboutButton {
+  background-color: #340297;
+  border: solid #0d0f1c 3px;
   transition: 0.5s;
-  padding: 10px;
+  padding: 15px;
   color: white;
   font-size: 150%;
+  margin: 10px;
+  text-decoration: none;
 }
 
-button:hover {
-  background-color: #340297;
+.aboutButton:hover {
+  background-color: #5300f8;
+  color: white;
 }
 
-button:focus {
-  outline: solid #0400ff 20px;
-  background-color: #2f077e;
-  transition: 0.5s;
+.aboutButton:focus {
+  outline: solid #2f077e 2px;
 }

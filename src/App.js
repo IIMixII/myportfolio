@@ -22,6 +22,8 @@ export default function App() {
   const [actualComponent, setActualComponent] = useState("");
   const [appPaddingTop, setAppPaddingTop] = useState(INITIAL_POSITION);
   const [divHeight, setDivHeight] = useState(0);
+  const [divBorder, setDivBorder] = useState("none");
+  const [divShadowBox, setDivShadowBox] = useState("0 0 10px transparent");
 
   //  Components states
   const [componentOpacity, setComponentOpacity] = useState(0);
@@ -49,9 +51,9 @@ export default function App() {
     setActualComponent(components[newComponent]);
 
     setTimeout(() => {
-      setComponentTransition("1.5s");
+      setComponentTransition("1s");
       setComponentOpacity(1);
-    }, 100);
+    }, 300);
   };
 
   const correctMargin = useCallback(() => {
@@ -79,11 +81,11 @@ export default function App() {
   };
 
   const changeWindowSize = useCallback(() => {
-    if (!initialState) {
-      setDivHeight(componentHeight + 30);
-    } else {
-      setDivHeight(0);
-    }
+    setDivBorder(
+      initialState ? "solid 0px transparent" : "solid 2px #2f008eab"
+    );
+    setDivShadowBox(initialState ? "0 0 5px transparent" : "0 0 5px #2f008eab");
+    setDivHeight(initialState ? 0 : componentHeight + 50);
   }, [initialState, componentHeight]);
 
   useEffect(() => {
@@ -94,9 +96,16 @@ export default function App() {
   return (
     <div className="App" style={{ paddingTop: appPaddingTop }}>
       <Banner changeComponent={changeComponent} initialState={initialState} />
-      <Navbar changeComponent={changeComponent} />
+      <Navbar changeComponent={changeComponent} initialState={initialState} />
 
-      <div className="divWindow" style={{ height: divHeight }}>
+      <div
+        className="divWindow"
+        style={{
+          height: divHeight,
+          border: divBorder,
+          boxShadow: divShadowBox,
+        }}
+      >
         {createWindow()}
       </div>
     </div>

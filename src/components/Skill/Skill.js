@@ -43,10 +43,10 @@ export default function Skill(props) {
     >
       {({ ...triggerHandler }) => (
         <Image
-          className="skillImage"
           src={props.img}
           {...triggerHandler}
           fluid
+          className="skillImage"
         />
       )}
     </OverlayTrigger>

@@ -4,15 +4,18 @@ import { useState, useEffect } from "react";
 import "./Projects.css";
 
 //     Components
-import Title from "../Title/Title";
 import Project from "../Project/Project";
 
 //     Component
 export default function Projects(props) {
   const [posts, setPosts] = useState(props.projects);
 
-  const changeHeight = () => {
-    props.setComponentHeight(document.getElementById("container").clientHeight);
+  const changeSize = () => {
+    if (document.getElementById("container") !== null) {
+      props.setComponentHeight(
+        document.getElementById("container").clientHeight
+      );
+    }
   };
 
   useEffect(() => {
@@ -28,31 +31,36 @@ export default function Projects(props) {
       })();
     }
 
-    changeHeight();
-    window.addEventListener("resize", changeHeight);
+    changeSize();
+    window.addEventListener("resize", changeSize);
 
-    // This is to correct the 'skills' component size for the first time
+    // This is to correct the 'projects' component size for the first time
     setTimeout(() => {
-      changeHeight();
-    }, 150);
+      changeSize();
+    }, 500);
 
     return () => {
-      window.removeEventListener("resize", changeHeight);
+      window.removeEventListener("resize", changeSize);
     };
   });
 
   return (
     <div className="projectsStyle" id="container">
-      <Title title="Github Projects" />
+      <h2 className="titleStyle">Github projects</h2>
       {posts.map((proj) => {
         if (proj.name !== "Ianm22") {
           var output = (
             <Project
-              image="image"
+              image={
+                "https://raw.githubusercontent.com/" +
+                proj.full_name +
+                "/main/preview.png"
+              }
               key={proj.id}
               title={proj.name}
               description={proj.description}
               link={proj.html_url}
+              className="projectsProjectDiv"
             />
           );
         }

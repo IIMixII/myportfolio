@@ -6,7 +6,6 @@ import "./Skills.css";
 
 //     Components
 import Skill from "../Skill/Skill";
-import Title from "../Title/Title";
 
 //     Backend
 import python_img from "../../images/python_logo.png";
@@ -28,21 +27,25 @@ import linux_img from "../../images/linux_logo.png";
 
 //     Component
 export default function Skills(props) {
-  const changeHeight = () => {
-    props.setComponentHeight(document.getElementById("container").clientHeight);
+  const changeSize = () => {
+    if (document.getElementById("container") !== null) {
+      props.setComponentHeight(
+        document.getElementById("container").clientHeight
+      );
+    }
   };
 
   useEffect(() => {
-    changeHeight();
-    window.addEventListener("resize", changeHeight);
+    changeSize();
+    window.addEventListener("resize", changeSize);
 
     // This is to correct the 'skills' component size for the first time
     setTimeout(() => {
-      changeHeight();
-    }, 150);
+      changeSize();
+    }, 300);
 
     return () => {
-      window.removeEventListener("resize", changeHeight);
+      window.removeEventListener("resize", changeSize);
     };
   });
 
@@ -50,7 +53,7 @@ export default function Skills(props) {
     <div id="container">
       <Row className="skillsRow">
         <Col className="skillsCol">
-          <Title title="Backend" />
+          <h2 className="titleStyle">Backend</h2>
           <Skill img={python_img} name={"Python"} score={3} keys={1} />
           <Skill img={java_img} name={"Java"} score={3} keys={2} />
           <Skill img={sql_img} name={"SQL"} score={3} keys={3} />
@@ -58,7 +61,7 @@ export default function Skills(props) {
         </Col>
 
         <Col className="skillsCol">
-          <Title title="Frontend" />
+          <h2 className="titleStyle">Frontend</h2>
           <Skill img={html_img} name={"HTML5"} score={3} keys={5} />
           <Skill img={css_img} name={"CSS3"} score={3} keys={6} />
           <Skill img={react_img} name={"React"} score={2} keys={7} />
@@ -66,7 +69,7 @@ export default function Skills(props) {
         </Col>
 
         <Col className="skillsCol">
-          <Title title="Tools" />
+          <h2 className="titleStyle">Tools</h2>
           <Skill img={linux_img} name={"Linux"} score={4} keys={9} />
           <Skill img={docker_img} name={"Docker"} score={3} keys={10} />
           <Skill

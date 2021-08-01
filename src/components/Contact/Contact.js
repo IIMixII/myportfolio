@@ -1,44 +1,67 @@
-import { useState, useEffect } from "react";
-
-//     Components
-import Title from "../Title/Title";
+import { useEffect, useState } from "react";
+import emailjs from "emailjs-com";
 
 //     Style
 import "./Contact.css";
 
 //     Component
 export default function Contact(props) {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
+  const [outputMessage, setOutputMessage] = useState("");
 
-  const changeHeight = () => {
-    props.setComponentHeight(document.getElementById("container").clientHeight);
+  const changeSize = () => {
+    if (document.getElementById("container") !== null) {
+      props.setComponentHeight(
+        document.getElementById("container").clientHeight
+      );
+    }
   };
 
   useEffect(() => {
-    changeHeight();
-    window.addEventListener("resize", changeHeight);
-
-    // This is to correct the 'skills' component size for the first time
-    setTimeout(() => {
-      changeHeight();
-    }, 150);
+    changeSize();
+    window.addEventListener("resize", changeSize);
 
     return () => {
-      window.removeEventListener("resize", changeHeight);
+      window.removeEventListener("resize", changeSize);
     };
   });
 
   const onSubmit = (event) => {
     event.preventDefault();
 
-    console.log("Submit");
+    emailjs
+      .sendForm(
+        "service_5fh9i2e",
+        "template_ybp7bmz",
+        event.target,
+        "user_wvF3OK6Z1Rp9K4I623Axu"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setOutputMessage("Message sent!");
+        },
+        (error) => {
+          console.log(error.text);
+          setOutputMessage(
+            "An error has occurred, please try again in a few minutes."
+          );
+        }
+      );
+
+    event.target.reset();
+  };
+
+  const showOutputMessage = () => {
+    if (outputMessage !== "") {
+      return <p className="outputMessage">{outputMessage}</p>;
+    } else {
+      return null;
+    }
   };
 
   return (
-    <div id="container">
-      <Title title="Contact me" />
+    <div id="container" className="contactDiv">
+      <h2 className="titleStyle">Contact me</h2>
       <form onSubmit={onSubmit} className="formStyle">
         <div className="formDivStyle">
           <input
@@ -46,11 +69,7 @@ export default function Contact(props) {
             placeholder="Name"
             name="name"
             className="inputStyle"
-            /* onFocus={() => {this.onFocus()}} */
-            onChange={(event) => {
-              setName(event.target.value);
-            }}
-            value={name}
+            required
           />
         </div>
 
@@ -59,29 +78,33 @@ export default function Contact(props) {
             placeholder="E-mail"
             name="email"
             className="inputStyle"
-            onChange={(event) => {
-              setEmail(event.target.value);
-            }}
-            value={email}
+            required
+          />
+        </div>
+
+        <div className="formDivStyle">
+          <input
+            placeholder="Subject"
+            name="subject"
+            className="inputStyle"
+            required
           />
         </div>
 
         <div className="formDivStyle">
           <textarea
-            placeholder="Subject"
-            name="subject"
+            placeholder="Message"
+            name="message"
             className="textareaStyle"
-            onChange={(event) => {
-              setSubject(event.target.value);
-            }}
-            value={subject}
+            required
           />
         </div>
 
         <div style={{ paddingTop: "10px" }}>
-          <input type="submit" className="inputStyle" />
+          <input type="submit" value="Submit" className="formSubmit" />
         </div>
       </form>
+      {showOutputMessage()}
     </div>
   );
 }

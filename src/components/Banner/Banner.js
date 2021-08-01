@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Image } from "react-bootstrap";
-import Typewriter from "typewriter-effect";
 
 //     Style
 import profileImg from "../../images/profile_image.jpg";
@@ -10,30 +9,31 @@ import "./Banner.css";
 function Banner(props) {
   const [userHelpHeight, setUserHelpHeight] = useState(35);
   const [userHelpVisibility, setUserHelpColor] = useState("white");
-  const [userHelpBorderRadius, setUserHelpBorderRadius] = useState("5%");
+  const [imageBorderRadius, setImageBorderRadius] = useState("5%");
+  const [imageBorderColor, setImageBorderColor] = useState("#121420ab");
 
   useEffect(() => {
-    if (props.initialState) {
-      setUserHelpHeight(35);
-      setUserHelpColor("white");
-      setUserHelpBorderRadius("50%");
-    } else {
-      setUserHelpHeight(0);
-      setUserHelpColor("transparent");
-      setUserHelpBorderRadius("30%");
-    }
+    setUserHelpHeight(props.initialState ? 35 : 0);
+    setUserHelpColor(props.initialState ? "white" : "transparent");
+    setImageBorderColor(props.initialState ? "#121420ab" : "#2f008eab");
+    setImageBorderRadius(props.initialState ? "50%" : "30%");
   }, [props.initialState]);
 
   return (
     <div className="bannerDiv" onClick={() => props.changeComponent("Home")}>
-      <Image
-        className="bannerProfileImg"
-        src={profileImg}
-        style={{ borderRadius: userHelpBorderRadius }}
-      />
-      <h1 className="bannerTitle">
-        <strong>Paul Antonio Almasi</strong>
-      </h1>
+      <div>
+        <Image
+          className="bannerProfileImg"
+          src={profileImg}
+          style={{
+            borderRadius: imageBorderRadius,
+            borderColor: imageBorderColor,
+          }}
+        />
+        <h1 className="bannerTitle">
+          <strong>Paul Antonio Almasi</strong>
+        </h1>
+      </div>
 
       <h3
         className="bannerSubtitle"
