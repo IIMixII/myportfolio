@@ -24,7 +24,12 @@ export default function Project(props) {
             <Image src={props.image} className="projectImage" />
           </div>
 
-          <a href={props.link} className="projectButton">
+          <a
+            href={props.link}
+            className="projectButton"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {props.title}
           </a>
         </div>

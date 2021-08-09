@@ -89,6 +89,19 @@ export default function App() {
   }, [initialState, componentHeight]);
 
   useEffect(() => {
+    if (projects.length === 0) {
+      (async () => {
+        const response = await fetch(
+          "https://api.github.com/users/Ianm22/repos"
+        );
+        const data = await response.json();
+
+        setProjects(data);
+      })();
+    }
+  }, [projects]);
+
+  useEffect(() => {
     correctMargin();
     changeWindowSize();
   }, [actualComponent, componentHeight, changeWindowSize, correctMargin]);

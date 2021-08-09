@@ -7,16 +7,21 @@
   color: white;
   margin: 10px;
   min-width: 300px;
+  max-width: 500px;
   text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .aboutButton {
+  display: inline-block;
   background-color: #340297;
   border: solid #0d0f1c 3px;
   transition: 0.5s;
   padding: 15px;
   color: white;
-  font-size: 150%;
+  font-size: 120%;
   margin: 10px;
   text-decoration: none;
 }

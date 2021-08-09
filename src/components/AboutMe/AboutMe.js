@@ -37,22 +37,38 @@ export default function AboutMe(props) {
           </h2>
 
           <p>
-            Hi, I'm Paul Antonio Almasi and ...
+            Hi, I consider myself a <strong>professional</strong> person with{" "}
+            <strong>logical thinking </strong>and motivated of{" "}
+            <strong>continuous learning</strong>.
             <br />
-            eaouaoe
-            <br />
-            eaouaoeuaeo
-            <br />
-            aeuoaeo
-            <br />
+            Adaptable to all organization and with fluent communication and
+            <string>skill improvements</string>.
           </p>
         </Col>
         <Col className="aboutCol">
           <a
             href="https://drive.google.com/file/d/1t4vg2MaSciSP-tAEMZvkBYmMPoNeY0OF/view?usp=sharing"
             className="aboutButton"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Download my CV
+          </a>
+          <a
+            href="https://github.com/Ianm22"
+            className="aboutButton"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Github
+          </a>
+          <a
+            href="https://www.linkedin.com/in/paul-antonio-almasi/"
+            className="aboutButton"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Linkedin
           </a>
         </Col>
       </Row>
