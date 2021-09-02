@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/myportfolio/static/css/main.97c3df64.chunk.css",
+    "main.js": "/myportfolio/static/js/main.2d7edad9.chunk.js",
+    "main.js.map": "/myportfolio/static/js/main.2d7edad9.chunk.js.map",
+    "runtime-main.js": "/myportfolio/static/js/runtime-main.76d21ca7.js",
+    "runtime-main.js.map": "/myportfolio/static/js/runtime-main.76d21ca7.js.map",
+    "static/css/2.fb17aa6d.chunk.css": "/myportfolio/static/css/2.fb17aa6d.chunk.css",
+    "static/js/2.d31291f6.chunk.js": "/myportfolio/static/js/2.d31291f6.chunk.js",
+    "static/js/2.d31291f6.chunk.js.map": "/myportfolio/static/js/2.d31291f6.chunk.js.map",
+    "index.html": "/myportfolio/index.html",
+    "static/css/2.fb17aa6d.chunk.css.map": "/myportfolio/static/css/2.fb17aa6d.chunk.css.map",
+    "static/css/main.97c3df64.chunk.css.map": "/myportfolio/static/css/main.97c3df64.chunk.css.map",
+    "static/js/2.d31291f6.chunk.js.LICENSE.txt": "/myportfolio/static/js/2.d31291f6.chunk.js.LICENSE.txt",
+    "static/media/css_logo.46be3df5.png": "/myportfolio/static/media/css_logo.46be3df5.png",
+    "static/media/dockerCompose_logo.1118be17.png": "/myportfolio/static/media/dockerCompose_logo.1118be17.png",
+    "static/media/docker_logo.1feeec8e.png": "/myportfolio/static/media/docker_logo.1feeec8e.png",
+    "static/media/git_logo.354d9a14.png": "/myportfolio/static/media/git_logo.354d9a14.png",
+    "static/media/gtk_logo.b189aa85.png": "/myportfolio/static/media/gtk_logo.b189aa85.png",
+    "static/media/html_logo.21904d77.png": "/myportfolio/static/media/html_logo.21904d77.png",
+    "static/media/java_logo.ceaed762.png": "/myportfolio/static/media/java_logo.ceaed762.png",
+    "static/media/javascript_logo.0bc222e0.png": "/myportfolio/static/media/javascript_logo.0bc222e0.png",
+    "static/media/linux_logo.655276fa.png": "/myportfolio/static/media/linux_logo.655276fa.png",
+    "static/media/profile_image.cbd2edf1.jpg": "/myportfolio/static/media/profile_image.cbd2edf1.jpg",
+    "static/media/python_logo.f61c1dea.png": "/myportfolio/static/media/python_logo.f61c1dea.png",
+    "static/media/react_logo.0a40c856.png": "/myportfolio/static/media/react_logo.0a40c856.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.76d21ca7.js",
+    "static/css/2.fb17aa6d.chunk.css",
+    "static/js/2.d31291f6.chunk.js",
+    "static/css/main.97c3df64.chunk.css",
+    "static/js/main.2d7edad9.chunk.js"
+  ]
+}
