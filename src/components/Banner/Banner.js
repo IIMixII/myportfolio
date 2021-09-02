@@ -3,6 +3,7 @@ import { Image } from "react-bootstrap";
 
 //     Style
 import profileImg from "../../images/profile_image.jpg";
+import hoverProfileImg from "../../images/hover_profile_image.png"
 import "./Banner.css";
 
 //     Component
@@ -11,12 +12,16 @@ function Banner(props) {
   const [userHelpVisibility, setUserHelpColor] = useState("white");
   const [imageBorderRadius, setImageBorderRadius] = useState("5%");
   const [imageBorderColor, setImageBorderColor] = useState("#121420ab");
+  const [hoverImage, setHoverImage] = useState(false)
 
   useEffect(() => {
     setUserHelpHeight(props.initialState ? 35 : 0);
     setUserHelpColor(props.initialState ? "white" : "transparent");
     setImageBorderColor(props.initialState ? "#121420ab" : "#2f008eab");
     setImageBorderRadius(props.initialState ? "50%" : "30%");
+    if (props.initialState){
+      setHoverImage(false)
+    }
   }, [props.initialState]);
 
   return (
@@ -24,10 +29,20 @@ function Banner(props) {
       <div>
         <Image
           className="bannerProfileImg"
-          src={profileImg}
+          src={hoverImage ? hoverProfileImg : profileImg}
           style={{
             borderRadius: imageBorderRadius,
             borderColor: imageBorderColor,
+          }}
+          onMouseEnter={() => {
+            if (!props.initialState){
+              setHoverImage(true)
+            }
+          }}
+          onMouseLeave={()=>{
+            if (!props.initialState){
+              setHoverImage(false)
+            }
           }}
         />
         <h1 className="bannerTitle">

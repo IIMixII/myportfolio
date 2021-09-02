@@ -41,8 +41,8 @@ export default function AboutMe(props) {
             <strong>logical thinking </strong>and motivated of{" "}
             <strong>continuous learning</strong>.
             <br />
-            Adaptable to all organization and with fluent communication and
-            <string>skill improvements</string>.
+            <strong>Adaptable</strong> to all organization and with fluent communication and{" "}
+            <strong>skill improvements</strong>.
           </p>
         </Col>
         <Col className="aboutCol">
