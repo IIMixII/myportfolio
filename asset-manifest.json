@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/myportfolio/static/css/main.97c3df64.chunk.css",
-    "main.js": "/myportfolio/static/js/main.0e0610f9.chunk.js",
-    "main.js.map": "/myportfolio/static/js/main.0e0610f9.chunk.js.map",
-    "runtime-main.js": "/myportfolio/static/js/runtime-main.76d21ca7.js",
-    "runtime-main.js.map": "/myportfolio/static/js/runtime-main.76d21ca7.js.map",
-    "static/css/2.fb17aa6d.chunk.css": "/myportfolio/static/css/2.fb17aa6d.chunk.css",
-    "static/js/2.a8a36262.chunk.js": "/myportfolio/static/js/2.a8a36262.chunk.js",
-    "static/js/2.a8a36262.chunk.js.map": "/myportfolio/static/js/2.a8a36262.chunk.js.map",
+    "main.css": "/myportfolio/static/css/main.37f8a37e.chunk.css",
+    "main.js": "/myportfolio/static/js/main.9b1c62bd.chunk.js",
+    "main.js.map": "/myportfolio/static/js/main.9b1c62bd.chunk.js.map",
+    "runtime-main.js": "/myportfolio/static/js/runtime-main.8937a9f2.js",
+    "runtime-main.js.map": "/myportfolio/static/js/runtime-main.8937a9f2.js.map",
+    "static/css/2.42d51ddf.chunk.css": "/myportfolio/static/css/2.42d51ddf.chunk.css",
+    "static/js/2.4dd4cb31.chunk.js": "/myportfolio/static/js/2.4dd4cb31.chunk.js",
+    "static/js/2.4dd4cb31.chunk.js.map": "/myportfolio/static/js/2.4dd4cb31.chunk.js.map",
     "index.html": "/myportfolio/index.html",
-    "static/css/2.fb17aa6d.chunk.css.map": "/myportfolio/static/css/2.fb17aa6d.chunk.css.map",
-    "static/css/main.97c3df64.chunk.css.map": "/myportfolio/static/css/main.97c3df64.chunk.css.map",
-    "static/js/2.a8a36262.chunk.js.LICENSE.txt": "/myportfolio/static/js/2.a8a36262.chunk.js.LICENSE.txt",
+    "static/css/2.42d51ddf.chunk.css.map": "/myportfolio/static/css/2.42d51ddf.chunk.css.map",
+    "static/css/main.37f8a37e.chunk.css.map": "/myportfolio/static/css/main.37f8a37e.chunk.css.map",
+    "static/js/2.4dd4cb31.chunk.js.LICENSE.txt": "/myportfolio/static/js/2.4dd4cb31.chunk.js.LICENSE.txt",
     "static/media/css_logo.46be3df5.png": "/myportfolio/static/media/css_logo.46be3df5.png",
     "static/media/dockerCompose_logo.1118be17.png": "/myportfolio/static/media/dockerCompose_logo.1118be17.png",
     "static/media/docker_logo.1feeec8e.png": "/myportfolio/static/media/docker_logo.1feeec8e.png",
@@ -26,10 +26,10 @@
     "static/media/react_logo.0a40c856.png": "/myportfolio/static/media/react_logo.0a40c856.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.76d21ca7.js",
-    "static/css/2.fb17aa6d.chunk.css",
-    "static/js/2.a8a36262.chunk.js",
-    "static/css/main.97c3df64.chunk.css",
-    "static/js/main.0e0610f9.chunk.js"
+    "static/js/runtime-main.8937a9f2.js",
+    "static/css/2.42d51ddf.chunk.css",
+    "static/js/2.4dd4cb31.chunk.js",
+    "static/css/main.37f8a37e.chunk.css",
+    "static/js/main.9b1c62bd.chunk.js"
   ]
 }
