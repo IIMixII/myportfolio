@@ -92,7 +92,7 @@ export default function App() {
     if (projects.length === 0) {
       (async () => {
         const response = await fetch(
-          "https://api.github.com/users/Ianm22/repos"
+          "https://api.github.com/users/IIMixII/repos"
         );
         const data = await response.json();
 

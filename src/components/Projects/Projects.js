@@ -29,7 +29,7 @@ export default function Projects(props) {
     <div className="projectsStyle" id="container">
       <h2 className="titleStyle">Github projects</h2>
       {props.projects.map((proj) => {
-        if (proj.name !== "Ianm22") {
+        if (proj.name !== "IIMixII") {
           var output = (
             <Project
               image={
