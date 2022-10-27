@@ -6,6 +6,14 @@ import "./Project.css";
 
 //     Component
 export default function Project(props) {
+  const imageExists = (image_url) => {
+    var http = new XMLHttpRequest();
+    http.open("HEAD", image_url, false);
+    http.send();
+    console.log("http.status: " + http.status);
+    return http.status !== 404;
+  };
+
   return (
     <OverlayTrigger
       placement="bottom"
@@ -21,7 +29,15 @@ export default function Project(props) {
       {({ ...triggerHandler }) => (
         <div className="projectStyle" {...triggerHandler}>
           <div className="projectDivImage">
-            <Image src={props.image} className="projectImage" />
+            {imageExists(props.image) ? (
+              <Image src={props.image} className="projectImage" />
+            ) : (
+              <span className="noImageText">
+                <strong>
+                  No preview available for this project. Click to see the code.
+                </strong>
+              </span>
+            )}
           </div>
 
           <a
