@@ -1,5 +1,5 @@
 {
-  "homepage": "https://iimixii.github.io/myportfolio/",
+  "homepage": "https://kakxem.github.io/myportfolio/",
   "name": "myportfolio",
   "version": "0.1.0",
   "private": true,
@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && echo iimixii.github.io/myportfolio/ > ./build/CNAME",
+    "build": "react-scripts build && echo kakxem.github.io/myportfolio/ > ./build/CNAME",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build"

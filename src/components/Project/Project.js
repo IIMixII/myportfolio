@@ -10,7 +10,6 @@ export default function Project(props) {
     var http = new XMLHttpRequest();
     http.open("HEAD", image_url, false);
     http.send();
-    console.log("http.status: " + http.status);
     return http.status !== 404;
   };
 
