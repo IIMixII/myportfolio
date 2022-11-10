@@ -8,7 +8,7 @@ NOTE: You should have 'yarn' and 'git' installed in your PC.
 
 1. Clone this repository: 
     ```
-    git clone https://github.com/Ianm22/myportfolio
+    git clone https://github.com/kakxem/myportfolio
     ```
 2. Install website dependencies:
     ```
