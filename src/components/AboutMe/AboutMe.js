@@ -47,12 +47,20 @@ export default function AboutMe(props) {
         </Col>
         <Col className="aboutCol">
           <a
-            href="https://drive.google.com/file/d/1t4vg2MaSciSP-tAEMZvkBYmMPoNeY0OF/view?usp=sharing"
+            href="https://drive.google.com/file/d/1CQ-SluXuTAMHSkkiCBwgUayAnaNYoSTY/view?usp=share_link"
             className="aboutButton"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Download my CV
+            CV (English)
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1DnR1Lv9F2yzXW4vEipvpwnx02rqXjopu/view?usp=share_link"
+            className="aboutButton"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CV (Spanish)
           </a>
           <a
             href="https://github.com/Ianm22"
