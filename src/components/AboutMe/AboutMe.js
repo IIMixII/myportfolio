@@ -47,7 +47,7 @@ export default function AboutMe(props) {
         </Col>
         <Col className="aboutCol">
           <a
-            href="https://drive.google.com/file/d/1CQ-SluXuTAMHSkkiCBwgUayAnaNYoSTY/view?usp=share_link"
+            href="https://drive.google.com/file/d/1uHSCDTpWPO2VNCw-xbyA5SeEnP5brkwN/view?usp=share_link"
             className="aboutButton"
             target="_blank"
             rel="noopener noreferrer"
@@ -55,7 +55,7 @@ export default function AboutMe(props) {
             CV (English)
           </a>
           <a
-            href="https://drive.google.com/file/d/1DnR1Lv9F2yzXW4vEipvpwnx02rqXjopu/view?usp=share_link"
+            href="https://drive.google.com/file/d/1L5ZCJR-kRoJ6XOaqvBsTfFEOtiiNbZC3/view?usp=share_link"
             className="aboutButton"
             target="_blank"
             rel="noopener noreferrer"
