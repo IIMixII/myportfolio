@@ -23,3 +23,37 @@
   margin-right: auto;
   transition: 0.5s;
 }
+
+.new-portfolio {
+  background-color: #340297;
+  color: #d1d1d1;
+  transition: all;
+  transition-duration: 0.5s;
+  border-radius: 10px;
+  animation-name: breathing-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.new-portfolio:hover {
+  background-color: #340297;
+  color: #d1d1d1;
+  transition: all;
+  transition-duration: 0.5s;
+}
+
+@keyframes breathing-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
