@@ -54,7 +54,9 @@ function Banner(props) {
             marginTop: "1rem",
           }}
         >
-          <a className="new-portfolio">New portfolio available!</a>
+          <a className="new-portfolio" href="https://kakxem.dev">
+            New portfolio available!
+          </a>
         </div>
 
         <h1 className="bannerTitle">
